@@ -37,7 +37,7 @@ struct ContentView: View {
                     }.pickerStyle(.segmented)
                 }
                 Section("Output") {
-                    Text("\(output)")
+                    Text("\(output.value.formatted())")
                     Picker("Unit", selection: $outputUnit) {
                         ForEach(Array(volumes.keys).sorted(), id: \.self){
                             Text("\($0)")
